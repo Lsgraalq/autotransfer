@@ -30,13 +30,13 @@ export default function Navbar () {
 
     return (
     
-    <div className="fixed w-full h-20 shadow-xl z-1000">
-        <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
+    <div className="fixed w-full h-20 shadow-xl z-1000 bg-white">
+        <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16 z-1000">
             <Link href={'/'}>
-            <div className=" uppercase xl:text-xl sm:text-base">AUTOTRANSFER</div>
+            <div className=" uppercase xl:text-xl sm:text-base z-1000">AUTOTRANSFER</div>
             </Link>
-            <div className="hidden lg:flex">
-                <ul className="hidden lg:flex">
+            <div className="hidden lg:flex z-1000">
+                <ul className="hidden lg:flex z-1000">
                     <Link href={'/'}>
                         <li className="ml-10 uppercase hover:border-b xl:text-xl sm:text-base Libre_wide">
                                 Start
