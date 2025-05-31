@@ -11,7 +11,7 @@ import { useGSAP } from "@gsap/react";
 import SplitText from "gsap/SplitText";
 gsap.registerPlugin(useGSAP, SplitText); 
 import { useState } from "react";
-
+import Footer from "../../components/footer";
 
 
 export default function Home() {
@@ -185,6 +185,7 @@ export default function Home() {
 
 
       </main>
+      <Footer></Footer>
 
       </>
   );
