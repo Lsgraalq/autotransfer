@@ -141,37 +141,44 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="why-us min-h-screen w-full pt-10 section-three">
+        <div className="why-us min-h-screen w-full pt-20 section-three">
           <div className="flex flex-col contaner">
 
-            <div className="flex sm:flex-row  flex-col pb-10  sm:justify-between px-5">
+            <div className="flex sm:flex-row  flex-col pb-10  sm:justify-between px-5 xl:pb-20 md:pb-15">
                 <div className="">
-                  <h2 className=" text-gray-500 text-md hidden sm:flex">Nutzen</h2>
-                  <h1 className="font-bold text-2xl">Ausgeben, aber richtig</h1>
+                  <h2 className=" text-gray-500 text-md hidden sm:flex sm:text-3xl  xl:text-4xl">Nutzen</h2>
+                  <h1 className="font-bold text-2xl sm:text-4xl xl:text-5xl">Ausgeben, aber richtig</h1>
                 </div>
-                <div className=" pt-2 flex sm:justify-end">
-                  <h2 className=" text-md sm:justify-end flex text-gray-500 ">Mit uns sind Sie gut beraten</h2>
+                <div className=" pt-2 flex sm:justify-end ">
+                  <h2 className=" text-md sm:justify-end flex text-gray-500 sm:text-2xl sm:pt-8  xl:pt-12">Mit uns sind Sie gut beraten</h2>
                 </div>
             </div>
 
             <div className="flex md:flex-row flex-col">
                 <div className="flex flex-col mx-4 mb-4 px-4 pb-4 border-1 gap-6 section-two border-gray-500 rounded-xs">
-                    <img src="/images/asd.png" alt="5 stars" className="flex justify-start   w-40"/>
-                    <h2 className="font-bold  text-xl">Jahrelange Erfahrung</h2>
-                    <p className="text-gray-500 leading-6 pb-4">Die jahrelange Berufserfahrung unserer Mitarbeiter spiegelt sich seit dem tagtäglich im kompetenten Fachwissen und einem professionellen Service wieder.</p>
+                    <img src="/images/asd.png" alt="5 stars" className="flex justify-start   w-40 xl:w-50 xl:pt-5 xl:ml-2"/>
+                    <h2 className="font-bold  text-xl xl:text-xl ">Jahrelange Erfahrung</h2>
+                    <p className="text-gray-500 leading-6 xl:leading-8 xl:text-lg pb-4">Die jahrelange Berufserfahrung unserer Mitarbeiter spiegelt sich seit dem tagtäglich im kompetenten Fachwissen und einem professionellen Service wieder.</p>
                 </div>
                 <div className="flex flex-col mx-4 mb-4 px-4 pb-4 border-1 gap-6 section-two border-gray-500 rounded-xs">
-                    <img src="/images/speed.png" alt="high speed" className="flex justify-start  mt-4 w-35"/>
-                    <h2 className="font-bold  text-xl">24-Stunden-Express-Service</h2>
-                    <p className="text-gray-500 leading-6 pb-4">Sie haben es eilig? Unter bestimmten Voraussetzungen ermöglichen wir eine besonders schnelle Expressüberführung Ihres Fahrzeugs innerhalb von 24 Stunden.</p>
+                    <img src="/images/speed.png" alt="high speed" className="flex justify-start  mt-4 w-35 xl:mt-7 xl:mb-2 xl:ml-5"/>
+                    <h2 className="font-bold  text-xl xl:text-xl">24-Stunden-Express-Service</h2>
+                    <p className="text-gray-500 leading-6 xl:leading-8 xl:text-lg pb-4">Sie haben es eilig? Unter bestimmten Voraussetzungen ermöglichen wir eine besonders schnelle Expressüberführung Ihres Fahrzeugs innerhalb von 24 Stunden.</p>
                 </div>
                 <div className="flex flex-col mx-4 mb-4 px-4 pb-4 border-1 gap-6 last-section rounded-br-[60] md:rounded-tr-[60] md:rounded-br-none border-gray-500 rounded-xs">
-                    <img src="/images/route.png" alt="excelent routing" className="flex justify-start  pt-4 w-20"/>
-                    <h2 className="font-bold  text-xl">Europaweite Überführungen</h2>
-                    <p className="text-gray-500 leading-6 pb-4">Wir überführen Ihr Fahrzeug deutschland- und europaweit. Wir sorgen für einen sicheren, unkomplizierten und termingerechten Fahrzeug-Transfer.</p>
+                    <img src="/images/route.png" alt="excelent routing" className="flex justify-start  pt-4 w-20 xl:ml-2 xl:mb-1"/>
+                    <h2 className="font-bold  text-xl xl:text-xl">Europaweite Überführungen</h2>
+                    <p className="text-gray-500 leading-6 xl:leading-8 xl:text-lg pb-4">Wir überführen Ihr Fahrzeug deutschland- und europaweit. Wir sorgen für einen sicheren, unkomplizierten und termingerechten Fahrzeug-Transfer.</p>
                 </div>
                 
             </div>
+          </div>
+          <div className="button-wrapper pt-15 pb-10 xl:pt-35">
+            <Link href={'/form'} className="flex justify-center">
+                                <button className="btn-effect-18 uppercase font-bold leading-8">
+                                  Unverbindlich  &nbsp;   anfragen
+                                </button>
+                    </Link> 
           </div>
         </div>
 
