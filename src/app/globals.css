@@ -34,6 +34,14 @@ body {
   background: #f6f6f6;
 }
 
+.section-three {
+  background: #EEEEEE;
+}
+
+.last-section {
+  background-color: #DBDBDB;
+}
+
 .btn-effect-18 {
   background-color: #b4b4b4;
   color: white;
@@ -101,7 +109,12 @@ button {
 
 
 
+.car-option:focus-within {
+    background-color: #3333;
+    border-radius: 25px;
 
+   
+}
 
 
 .cars-inputbar {
@@ -113,3 +126,38 @@ button {
 }
 
 
+.contaner {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .contaner {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contaner {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contaner {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .contaner {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .contaner {
+    max-width: 1600px;
+  }
+}

@@ -38,7 +38,7 @@ export default function Navbar () {
             <div className="hidden lg:flex z-1000">
                 <ul className="hidden lg:flex z-1000">
                     <Link href={'/'}>
-                        <li className="ml-10 uppercase hover:border-b xl:text-xl sm:text-base Libre_wide">
+                        <li className="ml-10 uppercase hover:border-b xl:text-xl sm:text-base  Libre_wide">
                                 Start
                         </li>
                     </Link>
@@ -52,13 +52,13 @@ export default function Navbar () {
                                Kontakt
                         </li>
                     </Link>
-                     <Link className="mr-30"href={'/about'}>
+                     <Link className="md:mr-20 xl:mr-30"href={'/about'}>
                         <li className="ml-10 uppercase hover:border-b xl:text-xl sm:text-base Libre_wide">
                                 about us
                         </li>
                     </Link>
                     <Link href={'/form'}>
-                        <li className="ml-10 uppercase hover:border-b xl:text-xl hover:bg-gray-600 duration-300 sm:text-base Libre_wide h-7 rounded-full py-0 px-4 w-51 cursor-pointer tracking-wider btn bg-black text-white">
+                        <li className="ml-10 flex justify-center pt-1 uppercase hover:border-b xl:text-xl hover:bg-gray-600 duration-300 sm:text-base Libre_wide h-8 rounded-full py-0 px-4 w-51 cursor-pointer tracking-wider btn bg-black text-white">
                                 Get started
                         </li>
                     </Link>
