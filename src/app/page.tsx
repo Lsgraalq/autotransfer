@@ -30,30 +30,30 @@ useGSAP(() => {
 
   // 🔵 Анимация .wow в самом начале
   tl.fromTo(
-    ".wow",
-    { height: "20px" },
-    {
-      height: "400px",
-      top: "100vh",
-      duration: 1.5,
-      ease: "expo.out",
-      onComplete: () => {
-        const el = document.querySelector(".wow");
-        if (el instanceof HTMLElement) {
-          el.classList.add("hidden");
-          
-        }
+  ".wow",
+  { height: "20px" },
+  { height: "400px", duration: 0.6, ease: "expo.out" ,top: "60vh",} // Увеличение до 400px
+).to(
+  ".wow",
+  {
+    height: "300px",
+    duration: 0.6,
+    ease: "expo.in",
+    top: "100vh",
+    onComplete: () => {
+      const el = document.querySelector(".wow");
+      if (el instanceof HTMLElement) {
+        el.classList.add("hidden");
       }
-      
     }
-  )
-
+  }
+)
   // 🔵 Анимация заголовков
   .fromTo(
     "#introText",
     { y: "-1000%", opacity: 0 },
     { y: "0%", opacity: 1, duration: 1.2, ease: "power3.out" },
-    "-=0.5"
+    "-=0.2"
   )
   .fromTo(
     "#introTexttwo",

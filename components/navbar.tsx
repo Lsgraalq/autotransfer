@@ -42,12 +42,12 @@ export default function Navbar () {
                                 Start
                         </li>
                     </Link>
-                     <Link href={'/'}>
+                     <Link href={'/services'}>
                         <li className="ml-10 uppercase hover:border-b xl:text-xl sm:text-base Libre_wide">
                                 Services
                         </li>
                     </Link>
-                     <Link href={'/'}>
+                     <Link href={'/kontakt'}>
                         <li className="ml-10 uppercase hover:border-b xl:text-xl sm:text-base  Libre_wide">
                                Kontakt
                         </li>
@@ -87,12 +87,12 @@ export default function Navbar () {
                                 Start
                         </li>
                     </Link>
-                     <Link href={'/'}>
+                     <Link href={'/services'}>
                         <li onClick={() => setMenuOpen(false)} className="py-4 cursor-pointer uppercase">
                                 Services
                         </li>
                     </Link>
-                     <Link href={'/'}>
+                     <Link href={'/kontakt'}>
                         <li onClick={() => setMenuOpen(false)} className="py-4 cursor-pointer uppercase">
                                Kontakt
                         </li>
