@@ -12,31 +12,99 @@ import SplitText from "gsap/SplitText";
 gsap.registerPlugin(useGSAP, SplitText); 
 import { useState } from "react";
 import Footer from "../../components/footer";
+import AboutUs from "../../components/aboutus";
 
+gsap.registerPlugin(useGSAP);
+
+gsap.registerPlugin(useGSAP);
 
 export default function Home() {
-  
-  const container = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    const split = SplitText.create(".text", { type: "lines" });
+  const container = useRef(null);
 
-    gsap.from(split.lines, {
-      y: 100,
-      autoAlpha: 0,
-      stagger: 0.45,
+
+ 
+
+useGSAP(() => {
+  const tl = gsap.timeline();
+
+  // 🔵 Анимация .wow в самом начале
+  tl.fromTo(
+    ".wow",
+    { height: "20px" },
+    {
+      height: "400px",
+      top: "100vh",
+      duration: 1.5,
+      ease: "expo.out",
+      onComplete: () => {
+        const el = document.querySelector(".wow");
+        if (el instanceof HTMLElement) {
+          el.classList.add("hidden");
+          
+        }
+      }
+      
+    }
+  )
+
+  // 🔵 Анимация заголовков
+  .fromTo(
+    "#introText",
+    { y: "-1000%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 1.2, ease: "power3.out" },
+    "-=0.5"
+  )
+  .fromTo(
+    "#introTexttwo",
+    { y: "1000%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 1.2, ease: "power3.out" },
+    "-=1"
+  )
+
+  // 🔵 Исчезновение обёртки
+  .to(
+    "#intro",
+    {
+      opacity: 0,
       duration: 1,
-      ease: "power3.out",
-    });
-    
-  }, { scope: container });
-
+      ease: "power2.out",
+      delay: 0.5,
+      onComplete: () => {
+        const el = document.querySelector("#intro");
+        if (el instanceof HTMLElement) {
+          el.classList.add("hidden");
+        }
+      }
+    }
+  );
+}, []);
   
   
 
-  return ( <>
-      <Navbar></Navbar> 
-      <main className="pt-20  min-h-screen md:pt-30" ref={container}>
+  return ( 
+      <>
+      
+      <div ref={container} className="">
+      <div className="fixed  w-full bg-black h-0  z-[100] wow" ></div>
+      <div
+        id="intro"
+        className="fixed flex-col  sm:flex-row gap-10 top-0 left-0 w-full h-full flex items-center justify-center  bg-white z-[90]"
+      >
+        <h1
+          id="introText"
+          className="sm:text-[100px] xl:text-[160px] xs text-black  text-6xl intruhao opacity-0"
+        >
+          Auto
+        </h1>
+        <h1 id="introTexttwo"
+          className="sm:text-[100px] xl:text-[160px]  text-6xl text-white intruha opacity-0"> Transfer</h1>
+       
+      </div>
+      </div>
+
+      <main className="  min-h-screen " ref={container}>
+       <div className="pb-20"><Navbar></Navbar> </div> 
        
         <div className="flex flex-col-reverse md:flex-row items-center gap-0">
           <div className="w-full md:w-1/2">
@@ -174,19 +242,22 @@ export default function Home() {
             </div>
           </div>
           <div className="button-wrapper pt-15 pb-10 xl:pt-35">
-            <Link href={'/form'} className="flex justify-center">
-                                <button className="btn-effect-18 uppercase font-bold leading-8">
+            <div className="flex justify-center">
+            <Link href={'/form'} className="flex justify-center md:w-90 w-60">
+                                <button className="btn-effect-18 uppercase font-bold leading-5  md:leading-8">
                                   Unverbindlich  &nbsp;   anfragen
                                 </button>
                     </Link> 
+                    </div>
           </div>
         </div>
-
-
-
+    
+      <AboutUs></AboutUs>
+ 
       </main>
+      
       <Footer></Footer>
 
-      </>
+    </>
   );
 }
