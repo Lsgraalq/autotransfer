@@ -30,38 +30,38 @@ export default function Navbar () {
 
     return (
     
-    <div className="fixed w-full h-20 shadow-xl z-[1] bg-white">
-        <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16 ">
+    <div className="fixed w-full h-20 shadow-xl z-[1] bg-white main-tool-bar">
+        <div className="flex justify-between items-center h-full w-full  contaner">
             <Link href={'/'}>
             <div className=" uppercase xl:text-xl sm:text-base ">AUTOTRANSFER</div>
             </Link>
             <div className="hidden lg:flex ">
-                <ul className="hidden lg:flex ">
+                <ul className="hidden lg:flex gap-20">
                     <Link href={'/'}>
-                        <li className="ml-10 uppercase hover:border-b xl:text-xl sm:text-base  Libre_wide">
+                        <li className=" uppercase hover:border-b xl:text-xl sm:text-base  Libre_wide">
                                 Start
                         </li>
                     </Link>
                      <Link href={'/services'}>
-                        <li className="ml-10 uppercase hover:border-b xl:text-xl sm:text-base Libre_wide">
+                        <li className=" uppercase hover:border-b xl:text-xl sm:text-base Libre_wide">
                                 Services
                         </li>
                     </Link>
                      <Link href={'/kontakt'}>
-                        <li className="ml-10 uppercase hover:border-b xl:text-xl sm:text-base  Libre_wide">
+                        <li className=" uppercase hover:border-b xl:text-xl sm:text-base  Libre_wide">
                                Kontakt
                         </li>
                     </Link>
-                     <Link className="md:mr-20 xl:mr-30"href={'/about'}>
-                        <li className="ml-10 uppercase hover:border-b xl:text-xl sm:text-base Libre_wide">
+                     <Link className="  "href={'/about'}>
+                        <li className=" uppercase hover:border-b xl:text-xl sm:text-base Libre_wide">
                                 about us
                         </li>
                     </Link>
-                    <Link href={'/form'}>
-                        <li className="ml-10 flex justify-center pt-1 uppercase hover:border-b xl:text-xl hover:bg-gray-600 duration-300 sm:text-base Libre_wide h-8 rounded-full py-0 px-4 w-51 cursor-pointer tracking-wider btn bg-black text-white">
+                    {/* <Link href={'/form'}>
+                        <li className=" flex justify-center pt-1 uppercase hover:border-b xl:text-xl hover:bg-gray-600 duration-300 sm:text-base Libre_wide h-8 rounded-full py-0 px-4 w-51 cursor-pointer tracking-wider btn bg-black text-white">
                                 Get started
                         </li>
-                    </Link>
+                    </Link> */}
                 </ul>
 
 

@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function AboutUs () {
     return (
-        <div className="mb-40 pt-30 ">
+        <div className="mb-40 pt-30 panel">
             <div className="contaner flex flex-col md:flex-row">
                 <div className="flex flex-col justify-center  w-full mx-auto max-w-300 px-5 gap-3">
                     

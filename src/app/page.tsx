@@ -1,23 +1,23 @@
-"use client"
+"use client";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
-import Navbar from '../../components/navbar'
-import React from 'react';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import ScrollArrow from "../../components/ScrollArrow";
 import Link from "next/link";
-import { useRef } from "react";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import SplitText from "gsap/SplitText";
-gsap.registerPlugin(useGSAP, SplitText); 
-import { useState } from "react";
+
+import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import AboutUs from "../../components/aboutus";
+import History from "../../components/history";
+import ScrollArrow from "../../components/ScrollArrow";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 gsap.registerPlugin(useGSAP);
-
-gsap.registerPlugin(useGSAP);
-
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
 
   const container = useRef(null);
@@ -26,6 +26,34 @@ export default function Home() {
  
 
 useGSAP(() => {
+  gsap.utils.toArray<HTMLElement>(".panel").forEach((panel, i) => {
+  gsap.from(panel, {
+    y: 100,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: panel,
+      start: "top 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+});
+
+  const showAnim = gsap.from('.main-tool-bar', { 
+  yPercent: -100,
+  paused: true,
+  duration: 0.2
+  }).progress(1);
+
+ScrollTrigger.create({
+  start: "top top",
+  end: "max",
+  markers: false,
+  onUpdate: (self) => {
+    self.direction === -1 ? showAnim.play() : showAnim.reverse()
+  }
+  });
+
+
   const tl = gsap.timeline();
 
   // 🔵 Анимация .wow в самом начале
@@ -79,7 +107,9 @@ useGSAP(() => {
     }
   );
 }, []);
+
   
+
   
 
   return ( 
@@ -102,20 +132,19 @@ useGSAP(() => {
        
       </div>
       </div>
-
-      <main className="  min-h-screen " ref={container}>
+      <main className="  min-h-screen scrollable-area" ref={container}>
        <div className="pb-20"><Navbar></Navbar> </div> 
-       
-        <div className="flex flex-col-reverse md:flex-row items-center gap-0">
-          <div className="w-full md:w-1/2">
-            <h1 className="text text-left pl-10 pt-10 text-2xl font-bold leading-10 md:text-3xl md:leading-15 md:pl-20 xl:text-6xl xl:leading-20">
+       {/* hero section */}
+        <section className="grid grid-cols-12 md:flex-row items-center gap-0  panel contaner">   
+          <div className="w-full col-span-4  md:col-span-6">
+            <h1 className="text text-left  pt-10 text-2xl font-bold leading-10 md:text-3xl md:leading-15  xl:text-5xl xl:leading-20">
           Europaweiter Autotransfer
           pünktlich, professionell
             </h1>
-            <h2 className="text-gray-500 pl-10 pt-10 pr-10  md:pl-20 md:pt-20 text leading-9	md:leading-13 md:text-4xl text-xl lg:text-3xl lg:leading-12">
+            <h2 className="text-gray-500  pt-10 pr-10   md:pt-20 text leading-9	md:leading-13 md:text-4xl text-xl lg:text-3xl lg:leading-12">
               Wir überführen alle Fahrzeugtypen: Pkw, Transporter, Oldtimer und Luxuskarossen von Tür zu Tür, in ganz Europa
             </h2>
-            <div className="btn-container text justify-center md:block md:pl-20 flex pt-12">
+            <div className="btn-container text justify-center md:block  flex pt-12">
               <Link href={'/form'} className="">
                                <button className="btn-effect-18 uppercase font-bold">
       Get started
@@ -123,25 +152,27 @@ useGSAP(() => {
                     </Link> 
             </div>
           </div>
-          <div className="md:w-1/2 w-full justify-center flex  ">
+          <div className="col-span-12 md:col-span-6 w-full justify-center flex  ">
               <DotLottieReact
                 src="https://lottie.host/ff797c80-2dcc-480d-b736-bc182e1f2077/jXvcIjN1iU.lottie"
                 loop
                 autoplay
               />
           </div>
-        </div>
-        <div className="justify-center md:pt-25  text pt-5 pb-20 mb-20 md:mb-10 lg:pt-25">
+          <div className="justify-center md:pt-25  hidden lg:flex text pt-5   lg:pt-25 col-start-1 col-end-12">
         <ScrollArrow />
         </div>
-        <div className="w-full  section-two pt-25 " id="next-section" >
-          <div className="flex flex-col">
+       </section>
+        {/* hero section ENDs */}
+        {/* SERCTION CAR CHOOSE STARTS */}
+        <div className="w-full  section-two pt-45 panel" id="next-section" >
+          <div className="flex flex-col contaner">
             
               <h1 className="text font-bold text-2xl justify-center flex">Was können wir für Sie tun?</h1>
           
             <div className="cars-container w-full flex flex-col">
                             <div className="cars-first-row pt-10 flex-col md:flex-row flex justify-between max-w-full">
-                                <div className=" pl-10">
+                                <div className=" pl-10 md:pl-0">
                                     <div className="text-black text-xl" >
                                         Abholung in
                                     </div>
@@ -149,7 +180,7 @@ useGSAP(() => {
                                         <input name="myInput" className='outline-none focus:outline-none focus:border-none flex items-center pb-2  pl-4 text-white placeholder-white  mt-5 pt-3 mb-5 w-75  bg-gray-500 rounded-xl md:w-60 xl:w-85' placeholder="Von wo?" />
                                     </div>
                                 </div>
-                                <div className="pl-10">
+                                <div className="pl-10 md:pl-0">
                                     <div className="text-black text-xl">
                                         Abholdatum
                                     </div>
@@ -157,11 +188,11 @@ useGSAP(() => {
                                         <input name="myInput" className='outline-none focus:outline-none focus:border-none flex items-center pb-2  pl-4 text-white  placeholder-white mt-5 pt-3 mb-5 w-75  bg-gray-500 rounded-xl md:w-60 xl:w-85' placeholder="dd.mm.jjjj" />
                                     </div>
                                 </div>
-                                <div className="pl-10 ">
+                                <div className="pl-10 md:pl-0 ">
                                     <div className="text-black text-xl">
                                         Zielort
                                     </div>
-                                    <div className="flex justify-start  md:pr-5">
+                                    <div className="flex justify-start  ">
                                         <input name="myInput" className=' outline-none focus:outline-none focus:border-none flex items-center pb-2  pl-4 text-white focus:border-white placeholder-white mt-5 pt-3 mb-5 w-75  bg-gray-500 rounded-xl md:w-60 xl:w-85' placeholder="Wohin?" />
                                         
                                     </div>
@@ -208,8 +239,9 @@ useGSAP(() => {
 
           </div>
         </div>
-        
-        <div className="why-us min-h-screen w-full pt-20 section-three">
+        {/* SERCTION CAR CHOOSE ENDs */}
+        {/* SECTION BENEFITS STARTS */}
+        <div className="why-us min-h-screen w-full pt-20 section-three panel">
           <div className="flex flex-col contaner">
 
             <div className="flex sm:flex-row  flex-col pb-10  sm:justify-between px-5 xl:pb-20 md:pb-15">
@@ -251,8 +283,8 @@ useGSAP(() => {
                     </div>
           </div>
         </div>
-    
-      <AboutUs></AboutUs>
+    {/* SECTION BENEFINT ENDS */}
+      <AboutUs ></AboutUs>
  
       </main>
       
