@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function History () {
     return (
-        <section className="pt-35 pb-25 panel ">
+        <section className="pt-35 pb-25 panel px-5">
             <div className="contaner grid grid-cols-10 w-full bg-[#EEEEEE] rounded-[40]">
                     <div className="lg:col-span-3 justify-start flex flex-col xl:gap-19 2xl:gap-23 lg:gap-10 p-5  gap-3 order-2 lg:order-1 col-span-10">
                         <h1 className="font-bold text-xl pt-6">AUTOTRANSFER</h1>

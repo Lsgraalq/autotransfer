@@ -137,7 +137,7 @@ ScrollTrigger.create({
        <div className="pb-20"><Navbar></Navbar> </div> 
        {/* hero section */}
         <section className="grid grid-cols-12 md:flex-row items-center gap-0  panel contaner">   
-          <div className="w-full col-span-4  md:col-span-6">
+          <div className="w-full col-start-3 col-end-12 order-2 sm:order-1 md:col-span-6 ">
             <h1 className="text text-left  pt-10 text-2xl font-bold leading-10 md:text-3xl md:leading-15  xl:text-5xl xl:leading-20">
           Europaweiter Autotransfer
           pünktlich, professionell
@@ -145,7 +145,7 @@ ScrollTrigger.create({
             <h2 className="text-gray-500  pt-10 pr-10   md:pt-20 text leading-9	md:leading-13 md:text-4xl text-xl lg:text-3xl lg:leading-12">
               Wir überführen alle Fahrzeugtypen: Pkw, Transporter, Oldtimer und Luxuskarossen von Tür zu Tür, in ganz Europa
             </h2>
-            <div className="btn-container text justify-center md:block  flex pt-12">
+            <div className="btn-container text justify-start md:block  flex pt-12">
               <Link href={'/form'} className="">
                                <button className="btn-effect-18 uppercase font-bold">
       Get started
@@ -153,14 +153,14 @@ ScrollTrigger.create({
                     </Link> 
             </div>
           </div>
-          <div className="col-span-12 md:col-span-6 w-full justify-center flex  ">
+          <div className="col-span-12 order-1 sm:order-2 md:col-span-6 w-full justify-center flex  ">
               <DotLottieReact
                 src="https://lottie.host/ff797c80-2dcc-480d-b736-bc182e1f2077/jXvcIjN1iU.lottie"
                 loop
                 autoplay
               />
           </div>
-          <div className="justify-center md:pt-25  hidden lg:flex text pt-5   lg:pt-25 col-start-1 col-end-12">
+          <div className="justify-center md:pt-25 sm:order-3 hidden lg:flex text pt-5  pb-5 lg:pt-25 col-start-1 col-end-12">
         <ScrollArrow />
         </div>
        </section>
