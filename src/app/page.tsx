@@ -15,6 +15,7 @@ import History from "../../components/history";
 import ScrollArrow from "../../components/ScrollArrow";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
+
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollTrigger);
@@ -240,6 +241,7 @@ ScrollTrigger.create({
           </div>
         </div>
         {/* SERCTION CAR CHOOSE ENDs */}
+        <History></History>
         {/* SECTION BENEFITS STARTS */}
         <div className="why-us min-h-screen w-full pt-20 section-three panel">
           <div className="flex flex-col contaner">
