@@ -17,20 +17,21 @@ const Libre_wide = Libre_Baskerville({
 });
 
 
-export default function Navbar () {
-
+export default function Navbar ({ visible = true }: { visible?: boolean }) {
+   
+    
     const  [menuOpen, setMenuOpen] = useState(false)
-
     const handleNav = () => {
         setMenuOpen(!menuOpen);
 
 
     }
 
+   
 
     return (
     
-    <div className="fixed w-full h-20 shadow-xl z-[1] bg-white main-tool-bar">
+    <div className={`fixed w-full h-20 shadow-xl z-[1] bg-white main-tool-bar  transition-opacity duration-500 ${visible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <div className="flex justify-between items-center h-full w-full  contaner">
             <Link href={'/'}>
             <div className=" uppercase xl:text-xl sm:text-base ">AUTOTRANSFER</div>
