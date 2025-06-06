@@ -41,7 +41,7 @@ export default function AboutPage () {
       muted
       loop
       playsInline
-      src="/images/timeline.mp4" // заменишь на своё видео
+      src="/images/Timeline.mp4" // заменишь на своё видео
     />
     {/* <h1 className="absolute inset-0 flex items-end pb-5 justify-center text-6xl font-bold  text-gray-100 top-50% ">AUTOTRANSFER</h1> */}
         </section>

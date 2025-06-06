@@ -1,3 +1,5 @@
+
+
 const { createServer } = require("http");
 const { parse } = require("url");
 const next = require("next");
@@ -9,19 +11,18 @@ const port = 3000;
 const app = next({ dev, hostname, port });
 const handle = app.getRequestHandler();
 
+
+
 app.prepare().then(() => {
   createServer(async (req, res) => {
     try {
       const parsedUrl = parse(req.url, true);
       const { pathname } = parsedUrl;
-
       if (pathname === "/api/send-email" && req.method === "POST") {
         let body = "";
-
         req.on("data", chunk => {
           body += chunk;
         });
-
         req.on("end", async () => {
           try {
             const { name, email, message } = JSON.parse(body);
@@ -42,7 +43,6 @@ app.prepare().then(() => {
                 pass: "1a2b3c4d5e6f7g",
               },
             });
-
             const mailOptions = {
               from: email,
               to: "eiiikerenew@gmail.com",
@@ -82,3 +82,5 @@ app.prepare().then(() => {
       console.log(`> Ready on http://${hostname}:${port}`);
     });
 });
+
+

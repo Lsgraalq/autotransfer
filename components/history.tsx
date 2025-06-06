@@ -24,7 +24,7 @@ export default function History () {
       muted
       loop
       playsInline
-      src="/images/timeline.mp4" // заменишь на своё видео
+      src="/images/Timeline.mp4" // заменишь на своё видео
     /></div>
                     
                     </div>
