@@ -28,7 +28,7 @@ export default function Footer (){
                     </div>
                 </div>
                 <div className="flex justify-center md:pt-10  pt-2">
-                    <a href="https://www.illia-merinets.site/" className="tracking-[6] text-gray-400 md:underline underline-offset-8  text-center">Designed and developed by Merinets</a>
+                    <a href="https://www.merinets.xyz/" className="tracking-[6] text-gray-400 md:underline underline-offset-8  text-center">Designed and developed by Merinets</a>
                     
                 </div>
             </div>
