@@ -136,38 +136,39 @@ ScrollTrigger.create({
       <main className="  min-h-screen scrollable-area" ref={container}>
        <div className="pb-20"><Navbar></Navbar> </div> 
        {/* hero section */}
-        <section className="grid grid-cols-12 md:flex-row items-center gap-0  panel contaner">   
-          <div className="w-full col-start-3 col-end-12 order-2 sm:order-1 md:col-span-6 ">
-            <h1 className="text text-left  pt-10 text-2xl font-bold leading-10 md:text-3xl md:leading-15  xl:text-5xl xl:leading-20">
-          Europaweiter Autotransfer
-          pünktlich, professionell
-            </h1>
-            <h2 className="text-gray-500  pt-10 pr-10   md:pt-20 text leading-9	md:leading-13 md:text-4xl text-xl lg:text-3xl lg:leading-12">
-              Wir überführen alle Fahrzeugtypen: Pkw, Transporter, Oldtimer und Luxuskarossen von Tür zu Tür, in ganz Europa
-            </h2>
-            <div className="btn-container text justify-start md:block  flex pt-12">
-              <Link href={'/form'} className="">
-                               <button className="btn-effect-18 uppercase font-bold">
-      Get started
-    </button>
-                    </Link> 
-            </div>
-          </div>
-          <div className="col-span-12 order-1 sm:order-2 md:col-span-6 w-full justify-center flex  ">
-              <DotLottieReact
-                src="https://lottie.host/ff797c80-2dcc-480d-b736-bc182e1f2077/jXvcIjN1iU.lottie"
-                loop
-                autoplay
-              />
-          </div>
-          <div className="justify-center md:pt-25 sm:order-3 hidden lg:flex text pt-5  pb-5 lg:pt-25 col-start-1 col-end-12">
-        <ScrollArrow />
-        </div>
-       </section>
+        <section className="grid grid-cols-12 items-center gap-0 container">   
+  <div className="w-full col-start-3 col-end-12 order-2 sm:order-1 md:col-span-6 2xl:pl-20">
+    <h1 className=" pt-10 text-left text-2xl font-bold leading-10 md:text-3xl md:leading-[3.5rem] xl:text-4xl xl:leading-[4.5rem]">
+      Europaweiter Autotransfer
+      <br />pünktlich, professionell
+    </h1>
+    <h2 className="pt-10 pr-10 text-xl leading-9 text-gray-500 md:pt-20 md:text-4xl md:leading-[3.25rem] lg:text-3xl lg:leading-[3rem]">
+      Wir überführen alle Fahrzeugtypen: Pkw, Transporter, Oldtimer und Luxuskarossen von Tür zu Tür, in ganz Europa
+    </h2>
+    <div className="pt-12 flex justify-start md:block">
+      <Link href="/form">
+        <button className="btn-effect-18 uppercase font-bold">Get started</button>
+      </Link> 
+    </div>
+  </div>
+
+  <div className="col-span-12 order-1 sm:order-2 md:col-span-6 w-full flex justify-center">
+    <DotLottieReact
+      src="https://lottie.host/ff797c80-2dcc-480d-b736-bc182e1f2077/jXvcIjN1iU.lottie"
+      loop
+      autoplay
+    />
+  </div>
+
+  <div className="col-span-12 hidden justify-center pb-5 pt-5 sm:order-3 lg:flex lg:pt-28">
+    <ScrollArrow />
+  </div>
+</section>
+
         {/* hero section ENDs */}
         {/* SERCTION CAR CHOOSE STARTS */}
         <div className="w-full  section-two pt-45 panel" id="next-section" >
-          <div className="flex flex-col contaner">
+          <div className="flex flex-col contaner 2xl:px-20">
             
               <h1 className="text font-bold text-2xl justify-center flex">Was können wir für Sie tun?</h1>
           
