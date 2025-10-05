@@ -136,7 +136,7 @@ ScrollTrigger.create({
       <main className="  min-h-screen scrollable-area" ref={container}>
        <div className="pb-20"><Navbar></Navbar> </div> 
        {/* hero section */}
-        <section className="grid grid-cols-12 md:flex-row items-center gap-0  panel contaner">   
+        <section className="grid grid-cols-12 md:flex-row items-center gap-0  panel contaner 2xl:pl-20">   
           <div className="w-full col-start-3 col-end-12 order-2 sm:order-1 md:col-span-6 ">
             <h1 className="text text-left  pt-10 text-2xl font-bold leading-10 md:text-3xl md:leading-15  xl:text-5xl xl:leading-20">
           Europaweiter Autotransfer
